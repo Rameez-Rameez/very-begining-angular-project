@@ -1,0 +1,25 @@
+<p>
+  directive works!
+</p>
+<h1>directive</h1>
+<h3>structural directive</h3>
+<h3>attribute directive</h3>
+<h3>custom directive</h3>
+
+<!-- structural directive -->
+
+<h1>structural directive</h1>
+<p>structural directive means play with dom structure of your html.here if *ngIf dreactive have true value then image will show else image will not show. see the code to analyse</p>
+<div *ngIf="imageToBshown"><img [src]="imgUrl" alt="airbus" style="width: 30%; height: 30%;"></div>
+<div *ngFor="let i of array;let ind=index">{{ind}} {{i}}</div>
+<span *ngFor="let i of array;let ind=index">>{{ind}} {{i}}</span>
+
+<!-- attribute directive -->
+
+<h1>attribute directive</h1>
+<div [ngStyle]="{color:'red'}">ngStyle attribute directive</div>
+<div [ngClass]="'test'">ngClass attribute directive</div>
+
+<!-- custom directive -->
+
+<h1 appCustom >custom directive</h1>

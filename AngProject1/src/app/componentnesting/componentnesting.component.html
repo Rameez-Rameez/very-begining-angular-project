@@ -1,0 +1,9 @@
+<p>
+  componentnesting works!
+</p>
+<a routerLink="componentnesting1">componentnesting1---</a>
+<a routerLink="componentnesting2">componentnesting2</a>
+<router-outlet></router-outlet>
+
+<app-componentnesting1 [name]="'ram kumar'"></app-componentnesting1>
+<app-componentnesting2 [age]="'1234'" (clickMessage)="componentnesting2Response($event)"></app-componentnesting2>

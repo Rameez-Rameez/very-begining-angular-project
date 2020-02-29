@@ -1,0 +1,18 @@
+<form #form=ngForm (ngSubmit)="onSubmit(form)">
+  Username:
+  <input type="text" name="username" id="" ngModel required><br>
+  <p *ngIf="submitted && form.controls['username'].errors">this is required</p>
+  Password:
+  <input type="password" name="password" ngModel minlength='3' required><br>
+  <p *ngIf="submitted && form.controls['password'].errors?.required">this is required</p>
+  <p *ngIf="submitted && form.controls['password'].errors">the password should have minimum 3 char</p>
+  email:
+  <input type="email" name="email" ngModel><br>
+  Phone No:
+  <input type="number" name="phone_no" ngModel><br>
+
+  <button type="submit">submit</button>
+</form>
+<div>
+  {{response1}}
+</div>

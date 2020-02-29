@@ -1,0 +1,21 @@
+<form [formGroup]='loginForm' (ngSubmit)="onSubmit(loginForm)">
+  Username:
+  <input type="text" formControlName="username" id="">
+  <p *ngIf="submitted && loginForm.controls['username'].errors">this is required</p><br>
+  Password:
+  <input type="password" formControlName="password">
+  <p *ngIf="submitted && loginForm.controls['password'].errors?.required">this is required</p>
+  <p *ngIf="submitted && loginForm.controls['password'].errors">the password should have minimum 3 char</p><br>
+  email:
+  <input type="email" formControlName="email">
+  <p *ngIf="submitted && loginForm.controls['email'].errors">this is required</p><br>
+  Phone No:
+  <input type="number" formControlName="phone_no">
+  <p *ngIf="submitted && loginForm.controls['phone_no'].errors">this is required</p><br>
+
+  <button type="submit">submit</button>
+</form>
+<div>
+  {{response1}}
+  <!-- //template interpolution -->
+</div>
